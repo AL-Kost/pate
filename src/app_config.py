@@ -5,3 +5,4 @@ class AppConfig:
     TRANSLATION_PROMPT = "Translate this text to {language}, don't say anything else: {text} \n{language}:"
     FB2_NAMESPACE = {'fb': 'http://www.gribuser.ru/xml/fictionbook/2.0'}
     TEMP_FOLDER = "temp_fb2"
+    PATE_LOGO_PATH = "images/pate_icon.svg"

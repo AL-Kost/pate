@@ -3,10 +3,26 @@ import streamlit as st
 from utils.fb2_extractor import extract_fb2_content
 from utils.epub_extractor import extract_epub_content
 from utils.llm_translator import translate_text_ollama
+from app_config import AppConfig
 
 def main():
     st.set_page_config(page_title="Pate 📚", layout="wide")
     st.title("Pate - Your AI FB2/EPUB Reader & Translator 📚")
+
+    try:
+        with open(AppConfig.PATE_LOGO_PATH, "r", encoding="utf-8") as svg_file:
+            svg_logo = svg_file.read()
+        st.sidebar.markdown(
+            f"""<div style='text-align: center;'>
+                <div style='width: 150px; margin: 20px auto;'>
+                    {svg_logo}
+                </div>
+            </div>""", 
+            unsafe_allow_html=True
+        )
+    except FileNotFoundError:
+        st.sidebar.error("SVG logo not found.")
+
     st.sidebar.header("Upload your FB2, EPUB, or ZIP with FB2")
 
     uploaded_file = st.sidebar.file_uploader("Upload an FB2, EPUB, or ZIP with FB2", type=["fb2", "epub", "zip"])
