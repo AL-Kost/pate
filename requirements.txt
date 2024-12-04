@@ -1,0 +1,4 @@
+streamlit==1.39.0
+ebooklib==0.18
+beautifulsoup4==4.12.3
+ollama>=0.4.2
