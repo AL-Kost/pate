@@ -16,7 +16,7 @@ Pate is an intelligent reader application that allows you to read FB2 and EPUB b
 - 📖 Support for FB2 and EPUB formats.
 - 🗜️ Handles zipped FB2 files.
 - 🤖 AI-powered translation using Ollama.
-- 📱 Responsive side-by-side view of original and translated text.
+- 📱  Responsive side-by-side view of original and translated text.
 - 🌓 Dark/Light theme support.
 - 📑 Chapter navigation.
 
@@ -86,7 +86,7 @@ TRANSLATION_LANGUAGE = "Russian" # Change target language
 TRANSLATION_PROMPT = "Translate this text to {language}, don't say anything else: {text} \n{language}:" #Change prompt
 ```
 
-The main translation logic is stored in `src/utls/llm_translator`. You can modify this file if necessary (e.g. use OpenAI API for translation).
+The main translation logic is stored in `src/utils/llm_translator`. You can modify this file if necessary (e.g. use OpenAI API for translation).
 
 ## Requirements
 
