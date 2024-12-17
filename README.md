@@ -1,5 +1,9 @@
 <div align="center">
-  <img src="images/pate_icon.svg" width="150" height="150" alt="Pate Logo"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="images/pate_icon_light.svg" width="150" height="150">
+    <source media="(prefers-color-scheme: light)" srcset="images/pate_icon.svg" width="150" height="150">
+    <img alt="Pate Logo" src="images/pate_icon.svg" width="150" height="150">
+  </picture>
   <h1>Pate - AI FB2/EPUB Reader & Translator 📚</h1>
 </div>
 
