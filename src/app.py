@@ -23,9 +23,9 @@ def main():
     except FileNotFoundError:
         st.sidebar.error("SVG logo not found.")
 
-    st.sidebar.header("Upload your FB2, EPUB, or ZIP with FB2")
+    st.sidebar.header("Upload your FB2, EPUB, or ZIP")
 
-    uploaded_file = st.sidebar.file_uploader("Upload an FB2, EPUB, or ZIP with FB2", type=["fb2", "epub", "zip"])
+    uploaded_file = st.sidebar.file_uploader("Upload an FB2, EPUB, or ZIP", type=["fb2", "epub", "zip"])
 
     if uploaded_file:
         file_path = os.path.join("temp.fb2")
